@@ -9,7 +9,7 @@ export default function Home() {
   function verDetalhes() {
     router.push({
       pathname: "/detalhes",
-      params: { modeloCarro: modelo || "Carro Padrão" }
+      params: { modeloCarro: modelo || "Teu Carro😂" }
     });
   }
 
@@ -18,7 +18,7 @@ export default function Home() {
       <Text style={styles.titulo}>Vitrine de Carros</Text>
 
       <Image
-        source={{ uri: "https://cdn-icons-png.flaticon.com/512/741/741407.png" }}
+        source={require("../assets/images/FERRARI.webp")}
         style={styles.imagem}
       />
 
@@ -26,7 +26,7 @@ export default function Home() {
 
       <TextInput
         style={styles.input}
-        placeholder="Ex: Corolla"
+        placeholder="Ex: Fusca do Gleissim"
         value={modelo}
         onChangeText={setModelo}
       />
@@ -49,9 +49,10 @@ const styles = StyleSheet.create({
     marginBottom: 16
   },
   imagem: {
-    width: 140,
-    height: 140,
-    marginBottom: 16
+    width: 180,
+    height: 120,
+    marginBottom: 16,
+    resizeMode: "contain"
   },
   label: {
     fontSize: 16,
