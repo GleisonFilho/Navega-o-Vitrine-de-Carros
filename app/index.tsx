@@ -9,13 +9,13 @@ export default function Home() {
   function verDetalhes() {
     router.push({
       pathname: "/detalhes",
-      params: { modeloCarro: modelo || "Teu Carro😂" }
+      params: { modeloCarro: modelo || "Carro do Gleissimn 😎" }
     });
   }
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>Vitrine de Carros</Text>
+      <Text style={styles.titulo}>Catálogo de Veículos</Text>
 
       <Image
         source={require("../assets/images/FERRARI.webp")}
@@ -26,7 +26,7 @@ export default function Home() {
 
       <TextInput
         style={styles.input}
-        placeholder="Ex: Fusca do Gleissim"
+        placeholder="Ex: Fusca 1972"
         value={modelo}
         onChangeText={setModelo}
       />

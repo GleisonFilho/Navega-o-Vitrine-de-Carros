@@ -7,18 +7,18 @@ export default function Detalhes() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>Detalhes do Carro</Text>
+      <Text style={styles.titulo}>Detalhes do Veículo</Text>
 
       <Image
         source={require("../assets/images/Fusca.png")}
         style={styles.imagem}
       />
 
-      <Text style={styles.info}>
-        Modelo selecionado: {modeloCarro}
-      </Text>
+      <Text style={styles.info}>Modelo: {modeloCarro}</Text>
+      <Text style={styles.info}>Status: Disponível</Text>
+      <Text style={styles.info}>Preço estimado: R$ 45.000,00</Text>
 
-      <Button title="Voltar para a vitrine" onPress={() => router.back()} />
+      <Button title="Voltar ao catálogo" onPress={() => router.back()} />
     </View>
   );
 }
@@ -43,6 +43,6 @@ const styles = StyleSheet.create({
   },
   info: {
     fontSize: 18,
-    marginBottom: 16
+    marginBottom: 6
   }
 });
